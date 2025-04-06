@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background-color: #fff;
+  color: #222;
+  top: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.trip {
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+.trip__box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip__heading {
+  display: block;
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #090031;
+  text-align: center;
+}
+
+.trip__text {
+  display: block;
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 16px;
+  color: #39325a;
+}
+
+.trip__image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.trip__table {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.trip__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #090031;
+}
+
+.trip__heading-box {
+  width: 45%;
+
+}
+.trip__text {
+  text-align: center;
+}
+@media only screen and (max-width: 880px) {
+  .trip__heading {
+    font-size: 32px !important;
+    margin-bottom: 20px;
+  }
+
+  .trip__text {
+    font-size: 14px !important;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .trip__box {
+    flex-direction: column-reverse;
+
+  }
+  .trip__image {
+    width: 100%;
+  }
+
+  .trip__heading-box {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .trip__heading {
+    font-size: 28px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .trip__heading {
+    font-size: 22px !important;
+  }
+}
+
+
+
+.skiptranslate {
+  display: none;
+}
