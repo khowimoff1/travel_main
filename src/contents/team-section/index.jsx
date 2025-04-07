@@ -3,6 +3,7 @@ import Heading from "@/components/heading";
 import Paragraph from "@/components/paragraph";
 import Section from "@/components/section";
 import { team } from "@/utils/consts";
+import Image from "next/image";
 import React from "react";
 
 const TeamSection = ({data}) => {
@@ -21,11 +22,11 @@ const TeamSection = ({data}) => {
           specific to our culture and which has enchanted travelers since the
           dawn of time!
         </Paragraph>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {
                 data?.map(item => (
-                    <div key={item?.id} className="w-full p-4 shadow-md rounded-md bg-white flex flex-col items-center text-center gap-2">
-                        <img src={item?.image?.src} alt="" className="w-full h-[300px] object-cover object-center rounded-md" />
+                    <div key={item?.id} className="flex flex-col items-center w-full gap-2 p-4 text-center bg-white rounded-md shadow-md">
+                        <Image src={item?.image?.src} alt="" className="w-full h-[300px] object-cover object-center rounded-md" />
                         <p className="text-xl font-semibold ">{item.name}</p>
                         <Paragraph >{item.position}</Paragraph>
                     </div>

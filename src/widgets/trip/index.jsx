@@ -1,5 +1,6 @@
 import Container from "@/components/container";
 import { tripsData } from "@/utils/consts";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useMemo } from "react";
 
@@ -22,7 +23,7 @@ const TripInner = () => {
               <h2 className="trip__heading">{trip?.en?.title}</h2>
               <p className="trip__text">{trip?.en?.text}</p>
             </div>
-            <img
+            <Image
               className="trip__image"
               src={
                 typeof trip?.image == "string" ? trip?.image : trip?.image?.src
@@ -31,7 +32,7 @@ const TripInner = () => {
             />
           </div>
           {trip?.table_image ? (
-            <img
+            <Image
               className="trip__table"
               src={
                 typeof trip?.table_image == "string"
